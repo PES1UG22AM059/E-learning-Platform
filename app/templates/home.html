@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElevateU</title>
+    <!-- Link to the CSS stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <meta name="description" content="Elevate your skills with our online courses. Join us today!">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-links">
+            <button onclick="location.href='{{ url_for('main.about') }}'">About Us</button>
+            <button onclick="location.href='{{ url_for('main.contact') }}'">Contact Us</button>
+            <button onclick="location.href='{{ url_for('main.profile') }}'">My Profile</button>
+            <button onclick="location.href='{{ url_for('main.logout_user') }}'">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <header class="hero">
+            <div class="hero-overlay">
+                <h1 class="hero-title">ElevateU</h1>
+                <h2 class="hero-subtitle">The Best E-Learning Platform</h2>
+                <p class="hero-description">
+                    Elevate your skills with our range of expert-led online courses.
+                </p>
+                <div class="cta-container">
+                    <a href="{{ url_for('main.courses') }}" class="cta-button">Explore Courses</a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Footer content goes here, if any -->
+    </footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

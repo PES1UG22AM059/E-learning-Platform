@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence Basics Test | ElevateU</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body, html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #d7e3fc;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        /* Test content */
+        .test-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .question-card {
+            background-color: white;
+            border: 1px solid #d7e3fc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .question-card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .question-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .options {
+            margin-bottom: 15px;
+        }
+
+        /* Style for radio buttons and labels */
+        .options input[type="radio"] {
+            margin-right: 10px;
+            accent-color: #d7e3fc;
+        }
+
+        .options label {
+            font-size: 1rem;
+            color: #555;
+            cursor: pointer;
+            padding: 5px;
+            display: inline-block;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .options label:hover {
+            color: #fff;
+            background-color: #d7e3fc;
+            border-radius: 5px;
+        }
+
+        .options input[type="radio"]:checked + label {
+            background-color: #d7e3fc;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            color: #d7e3fc;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #6f98e0;
+            color: #fff;
+        }
+
+        .submit-btn:active {
+            background-color: #4a82c3;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #555;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <h1>Artificial Intelligence Basics Test</h1>
+    
+    <form method="POST" action="/submit_ai">
+        <div class="test-content">
+            <!-- Question 1 -->
+            <div class="question-card">
+                <h2 class="question-title">1. What is the core function of a neural network?</h2>
+                <div class="options">
+                    <input type="radio" id="q1_opt1" name="ai_q1" value="To mimic human brain functions">
+                    <label for="q1_opt1">To mimic human brain functions</label><br>
+                    <input type="radio" id="q1_opt2" name="ai_q1" value="To process and store data in a traditional computer manner">
+                    <label for="q1_opt2">To process and store data in a traditional computer manner</label><br>
+                    <input type="radio" id="q1_opt3" name="ai_q1" value="To calculate large datasets for predictions">
+                    <label for="q1_opt3">To calculate large datasets for predictions</label><br>
+                    <input type="radio" id="q1_opt4" name="ai_q1" value="To simulate data in response to external stimuli">
+                    <label for="q1_opt4">To simulate data in response to external stimuli</label><br>
+                </div>
+            </div>
+            <!-- Question 2 -->
+            <div class="question-card">
+                <h2 class="question-title">2. What is Natural Language Processing (NLP) used for in AI?</h2>
+                <div class="options">
+                    <input type="radio" id="q2_opt1" name="ai_q2" value="To enable machines to interpret and generate human language">
+                    <label for="q2_opt1">To enable machines to interpret and generate human language</label><br>
+                    <input type="radio" id="q2_opt2" name="ai_q2" value="To classify large datasets into predefined categories">
+                    <label for="q2_opt2">To classify large datasets into predefined categories</label><br>
+                    <input type="radio" id="q2_opt3" name="ai_q2" value="To develop algorithms for image recognition">
+                    <label for="q2_opt3">To develop algorithms for image recognition</label><br>
+                    <input type="radio" id="q2_opt4" name="ai_q2" value="To build self-driving car systems">
+                    <label for="q2_opt4">To build self-driving car systems</label><br>
+                </div>
+            </div>
+            <!-- Question 3 -->
+            <div class="question-card">
+                <h2 class="question-title">3. Which of these is a method of unsupervised learning?</h2>
+                <div class="options">
+                    <input type="radio" id="q3_opt1" name="ai_q3" value="K-means clustering">
+                    <label for="q3_opt1">K-means clustering</label><br>
+                    <input type="radio" id="q3_opt2" name="ai_q3" value="Linear regression">
+                    <label for="q3_opt2">Linear regression</label><br>
+                    <input type="radio" id="q3_opt3" name="ai_q3" value="Support Vector Machines (SVM)">
+                    <label for="q3_opt3">Support Vector Machines (SVM)</label><br>
+                    <input type="radio" id="q3_opt4" name="ai_q3" value="Decision trees">
+                    <label for="q3_opt4">Decision trees</label><br>
+                </div>
+            </div>
+            <!-- Question 4 -->
+            <div class="question-card">
+                <h2 class="question-title">4. What does a confusion matrix measure?</h2>
+                <div class="options">
+                    <input type="radio" id="q4_opt1" name="ai_q4" value="The accuracy of a model">
+                    <label for="q4_opt1">The accuracy of a model</label><br>
+                    <input type="radio" id="q4_opt2" name="ai_q4" value="The precision and recall of a model">
+                    <label for="q4_opt2">The precision and recall of a model</label><br>
+                    <input type="radio" id="q4_opt3" name="ai_q4" value="The error rate of a model">
+                    <label for="q4_opt3">The error rate of a model</label><br>
+                    <input type="radio" id="q4_opt4" name="ai_q4" value="The performance of a model in a multi-class classification task">
+                    <label for="q4_opt4">The performance of a model in a multi-class classification task</label><br>
+                </div>
+            </div>
+            <button class="submit-btn" type="submit">Submit</button>
+        </div>
+    </form>
+
+
+    <script>
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(event) {
+            let allAnswered = true;
+            // Check if all questions have been answered
+            document.querySelectorAll('.question-card').forEach((questionCard) => {
+                let questionId = questionCard.id;
+                let answered = false;
+                questionCard.querySelectorAll('input[type="radio"]').forEach((radio) => {
+                    if (radio.checked) {
+                        answered = true;
+                    }
+                });
+                if (!answered) {
+                    allAnswered = false;
+                    alert("Please answer all questions");
+                    return;
+                }
+            });
+
+            if (!allAnswered) {
+                event.preventDefault(); // Prevent form submission if not all questions are answered
+            }
+        });
+    </script>
+</body>
+</html>

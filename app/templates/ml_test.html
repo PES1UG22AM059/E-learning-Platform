@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Test | ElevateU</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body, html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #d7e3fc;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        /* Test content */
+        .test-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .question-card {
+            background-color: white;
+            border: 1px solid #d7e3fc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .question-card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .question-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .options {
+            margin-bottom: 15px;
+        }
+
+        /* Style for radio buttons and labels */
+        .options input[type="radio"] {
+            margin-right: 10px;
+            accent-color: #d7e3fc; /* radio button color */
+        }
+
+        .options label {
+            font-size: 1rem;
+            color: #555;
+            cursor: pointer;
+            padding: 5px;
+            display: inline-block;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .options label:hover {
+            color: #fff;
+            background-color: #d7e3fc;
+            border-radius: 5px;
+        }
+
+        .options input[type="radio"]:checked + label {
+            background-color: #d7e3fc;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            color: #d7e3fc;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #6f98e0;
+            color: #fff;
+        }
+
+        .submit-btn:active {
+            background-color: #4a82c3;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #555;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Machine Learning Test</h1>
+    
+    <form method="POST" action="/submit_ml">
+        <div class="test-content">
+            <!-- Question 1 -->
+            <div class="question-card">
+                <h2 class="question-title">1. What is supervised learning in machine learning?</h2>
+                <div class="options">
+                    <input type="radio" id="q1_opt1" name="ml_q1" value="Learning from labeled data">
+                    <label for="q1_opt1">Learning from labeled data</label><br>
+                    <input type="radio" id="q1_opt2" name="ml_q1" value="Learning from unlabeled data">
+                    <label for="q1_opt2">Learning from unlabeled data</label><br>
+                    <input type="radio" id="q1_opt3" name="ml_q1" value="Learning from reinforcement signals">
+                    <label for="q1_opt3">Learning from reinforcement signals</label><br>
+                    <input type="radio" id="q1_opt4" name="ml_q1" value="Learning from random data">
+                    <label for="q1_opt4">Learning from random data</label><br>
+                </div>
+            </div>
+            <!-- Question 2 -->
+            <div class="question-card">
+                <h2 class="question-title">2. Which algorithm is typically used for regression tasks?</h2>
+                <div class="options">
+                    <input type="radio" id="q2_opt1" name="ml_q2" value="Linear Regression">
+                    <label for="q2_opt1">Linear Regression</label><br>
+                    <input type="radio" id="q2_opt2" name="ml_q2" value="K-Means Clustering">
+                    <label for="q2_opt2">K-Means Clustering</label><br>
+                    <input type="radio" id="q2_opt3" name="ml_q2" value="Decision Trees">
+                    <label for="q2_opt3">Decision Trees</label><br>
+                    <input type="radio" id="q2_opt4" name="ml_q2" value="Naive Bayes">
+                    <label for="q2_opt4">Naive Bayes</label><br>
+                </div>
+            </div>
+            <!-- Question 3 -->
+            <div class="question-card">
+                <h2 class="question-title">3. What is the goal of unsupervised learning?</h2>
+                <div class="options">
+                    <input type="radio" id="q3_opt1" name="ml_q3" value="Predicting future outcomes">
+                    <label for="q3_opt1">Predicting future outcomes</label><br>
+                    <input type="radio" id="q3_opt2" name="ml_q3" value="Finding patterns in unlabeled data">
+                    <label for="q3_opt2">Finding patterns in unlabeled data</label><br>
+                    <input type="radio" id="q3_opt3" name="ml_q3" value="Classifying data into predefined categories">
+                    <label for="q3_opt3">Classifying data into predefined categories</label><br>
+                    <input type="radio" id="q3_opt4" name="ml_q3" value="Improving accuracy of labeled data">
+                    <label for="q3_opt4">Improving accuracy of labeled data</label><br>
+                </div>
+            </div>
+            <!-- Question 4 -->
+            <div class="question-card">
+                <h2 class="question-title">4. Which of the following is a common method for evaluating machine learning models?</h2>
+                <div class="options">
+                    <input type="radio" id="q4_opt1" name="ml_q4" value="Cross-validation">
+                    <label for="q4_opt1">Cross-validation</label><br>
+                    <input type="radio" id="q4_opt2" name="ml_q4" value="A/B Testing">
+                    <label for="q4_opt2">A/B Testing</label><br>
+                    <input type="radio" id="q4_opt3" name="ml_q4" value="Sentiment Analysis">
+                    <label for="q4_opt3">Sentiment Analysis</label><br>
+                    <input type="radio" id="q4_opt4" name="ml_q4" value="Natural Language Processing">
+                    <label for="q4_opt4">Natural Language Processing</label><br>
+                </div>
+            </div>
+            <button class="submit-btn" type="submit">Submit</button>
+        </div>
+    </form>
+
+
+    <script>
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(event) {
+            let allAnswered = true;
+            // Check if all questions have been answered
+            document.querySelectorAll('.question-card').forEach((questionCard) => {
+                let questionId = questionCard.id;
+                let answered = false;
+                questionCard.querySelectorAll('input[type="radio"]').forEach((radio) => {
+                    if (radio.checked) {
+                        answered = true;
+                    }
+                });
+                if (!answered) {
+                    allAnswered = false;
+                    alert("Please answer all questions");
+                    return;
+                }
+            });
+
+            if (!allAnswered) {
+                event.preventDefault(); // Prevent form submission if not all questions are answered
+            }
+        });
+    </script>
+
+</body>
+</html>

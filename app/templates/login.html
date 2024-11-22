@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ElevateU</title>
+    <style>
+        /* General styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: Arial, sans-serif;
+            background-color: #d7e3fc; /* Soft pastel blue for the entire background */
+            color: #333;
+            height: 100%;
+            display: flex; /* Flexbox for centering */
+            justify-content: center; /* Horizontally center */
+            align-items: center; /* Vertically center */
+            overflow-x: hidden;
+        }
+
+        /* Container and form section */
+        .container {
+            background-color: #ffffff; /* White container background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        label {
+            color: #555;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            font-size: 1em;
+        }
+
+        /* Smaller login button with #d7e3fc color */
+        button {
+            width: 100%;
+            padding: 8px; /* Reduced padding for a smaller button */
+            font-size: 1rem; /* Smaller font size */
+            color: #fff;
+            background-color: #d7e3fc; /* Button color set to #d7e3fc */
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        button:hover {
+            background-color: #b0c6ec; /* Darker shade of #d7e3fc for hover effect */
+            color: #333;
+        }
+
+        /* Link styling */
+        p {
+            margin-top: 20px;
+            color: #666;
+        }
+
+        a {
+            color: #d7e3fc; /* Changed link color to #d7e3fc */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 1.3em;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ElevateU</h1>
+            <p class="tagline">The Best E-Learning Platform</p>
+        </div>
+        <form action="{{ url_for('main.login_user') }}" method="POST" class="login-form" onsubmit="return validateForm()">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+            <p>New user? <a href="/register">Register here</a></p>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === "" || password === "") {
+                alert("Username and Password must be filled out");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

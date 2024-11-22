@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing Essentials | ElevateU</title>
+    <style>
+        /* General styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: Arial, sans-serif;
+            background-color: #d7e3fc; /* Soft pastel blue */
+            color: #333;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Container and content section */
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        .take-test-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #d7e3fc;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .take-test-btn:hover {
+            background-color: #b0c6ec;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cloud Computing Essentials</h2>
+
+        <p>Cloud computing has become an essential part of modern IT infrastructure, offering scalable, flexible, and cost-effective solutions for businesses and individuals. This course will provide you with a solid introduction to cloud computing concepts, focusing on services like AWS, Google Cloud, and Microsoft Azure. You will learn about the various cloud models—public, private, and hybrid—and the benefits each brings to different use cases.</p>
+
+        <p>The course will guide you through the architecture of cloud services, including virtual machines, storage, networking, and security. You will understand how these components work together to provide robust cloud solutions that are reliable and scalable. By learning the fundamentals of cloud infrastructure, you'll gain the knowledge needed to design and deploy cloud-based applications.</p>
+
+        <p>We’ll also delve into the deployment and management aspects of cloud computing. You’ll explore the tools and platforms available for managing resources in the cloud, such as automated deployment services, cloud monitoring, and disaster recovery systems. Hands-on examples and practical exercises will help you get familiar with these platforms and improve your operational efficiency in cloud environments.</p>
+
+        <p>Finally, this course introduces cloud services’ role in modern tech industries. Whether you're building applications, managing big data, or running machine learning models, cloud platforms provide the backbone to power these innovations. You'll walk away from this course with a practical understanding of cloud computing, positioning yourself for success in the ever-evolving tech world.</p>
+
+        <!-- Take the Test Button -->
+        <a href="{{ url_for('main.cloud_test') }}" class="take-test-btn">Take the Test</a>
+
+    </div>
+</body>
+</html>

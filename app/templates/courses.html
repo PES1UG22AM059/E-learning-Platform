@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | ElevateU</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body, html {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #d7e3fc;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        /* Course list container */
+        .course-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        /* Individual course card */
+        .course-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .course-title {
+            font-size: 1.7em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .course-description {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .course-price {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .button-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .button {
+            width: 48%;
+            background-color: #d7e3fc; /* Green background for buttons */
+            color: white; /* White text color */
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .button:hover {
+            background-color: #b0c6ec; 
+        }
+
+        .button:active {
+            background-color: #3e8e41; /* Even darker green when button is clicked */
+        }
+
+        /* Flash message styles */
+        .alert {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Our Courses</h1>
+
+    
+
+    <!-- Course List -->
+    <div class="course-list">
+        <!-- Course 1 -->
+        <div class="course-card">
+            <h2 class="course-title">Python Programming</h2>
+            <p class="course-description">
+                Master Python, one of the most popular programming languages, through hands-on projects. Cover essential syntax, data structures, and advanced concepts to prepare for a successful coding journey.
+            </p>
+            <p class="course-price">₹3,999</p>
+            <div class="button-row">
+                <button class="button" onclick="enrollCourse('Python Programming')">Enroll Now</button>
+                <a href="{{ url_for('main.python_course') }}" class="button">Start Course</a>
+            </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card">
+            <h2 class="course-title">Data Science with R</h2>
+            <p class="course-description">
+                Dive deep into data science with R. Explore data analysis, visualization techniques, and statistical modeling to prepare for the analytics industry.
+            </p>
+            <p class="course-price">₹4,999</p>
+            <div class="button-row">
+                <button class="button" onclick="enrollCourse('Data Science with R')">Enroll Now</button>
+                <a href="{{ url_for('main.r_course') }}" class="button">Start Course</a>
+            </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course-card">
+            <h2 class="course-title">Web Development</h2>
+            <p class="course-description">
+                Learn how to build and design responsive websites from scratch. Covering HTML, CSS, JavaScript, and backend basics, this course equips you to create dynamic web apps.
+            </p>
+            <p class="course-price">₹3,499</p>
+            <div class="button-row">
+                <button class="button" onclick="enrollCourse('Web Development')">Enroll Now</button>
+                <a href="{{ url_for('main.web_development_course') }}" class="button">Start Course</a>
+            </div>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="course-card">
+            <h2 class="course-title">Machine Learning</h2>
+            <p class="course-description">
+                Explore foundational machine learning concepts, algorithms, and practical applications. Hands-on projects and case studies prepare you for the AI industry.
+            </p>
+            <p class="course-price">₹7,999</p>
+            <div class="button-row">
+                <button class="button" onclick="enrollCourse('Machine Learning')">Enroll Now</button>
+                <a href="{{ url_for('main.machine_learning_course') }}" class="button">Start Course</a>
+            </div>
+        </div>
+
+        <!-- Course 5 -->
+        <div class="course-card">
+            <h2 class="course-title">Artificial Intelligence Basics</h2>
+            <p class="course-description">
+                Understand the core principles of AI, including neural networks, natural language processing, and computer vision, to develop a strong foundation in artificial intelligence.
+            </p>
+            <p class="course-price">₹5,499</p>
+            <div class="button-row">
+                <button class="button" onclick="enrollCourse('Artificial Intelligence Basics')">Enroll Now</button>
+                <a href="{{ url_for('main.artificial_intelligence_basics_course') }}" class="button">Start Course</a>
+            </div>
+        </div>
+
+        <!-- Course 6 -->
+        <div class="course-card">
+            <h2 class="course-title">Cloud Computing Essentials</h2>
+            <p class="course-description">
+                Get introduced to cloud computing services, including AWS, Google Cloud, and Azure. Focus on cloud architecture, deployment, and management to enhance your tech skill set.
+            </p>
+            <p class="course-price">₹6,499</p>
+            <div class="button-row">
+                <button class="button" onclick="enrollCourse('Cloud Computing Essentials')">Enroll Now</button>
+                <a href="{{ url_for('main.cloud_computing_course') }}" class="button">Start Course</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function enrollCourse(courseName) {
+            fetch('/enroll', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ course_name: courseName })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message); // Show success message
+                    location.reload(); // Reload the page to reflect updated enrollment status
+                } else {
+                    alert(data.message); // Show error message
+                }
+            })
+            .catch(error => {
+                alert("An error occurred during enrollment. Please try again.");
+                console.error('Error:', error);
+            });
+        }
+
+        function startLesson(courseCode) {
+            // Redirect the user to the lesson page for the specific course
+            window.location.href = `/course/${courseCode}`;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science with R | ElevateU</title>
+    <style>
+        /* General styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: Arial, sans-serif;
+            background-color: #d7e3fc; /* Soft pastel blue */
+            color: #333;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Container and content section */
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        .take-test-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #d7e3fc;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .take-test-btn:hover {
+            background-color: #b0c6ec;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Data Science with R</h2>
+        
+        <p>The R programming language is one of the most popular tools for data science, particularly due to its strong capabilities in statistical analysis and data visualization. It provides a wide range of packages like `dplyr` and `tidyr` for data manipulation, making it easy to clean, filter, and transform raw datasets into meaningful insights. Understanding these foundational packages helps data scientists prepare data efficiently for further analysis and modeling.</p>
+
+        <p>Data visualization is a crucial part of data science, and R excels with libraries like `ggplot2`. This powerful library allows you to create a wide variety of plots, from simple bar and line charts to complex, multi-layered visualizations. Visualizing data helps reveal patterns, trends, and anomalies, enabling data scientists to make data-driven decisions and communicate findings effectively.</p>
+
+        <p>Another strength of R lies in its statistical modeling capabilities. With functions and packages dedicated to linear and logistic regression, time series analysis, and machine learning algorithms, R enables data scientists to model complex datasets and predict future trends. These techniques form the backbone of predictive analytics, helping organizations forecast outcomes and optimize strategies.</p>
+
+        <p>Beyond basic data analysis, R also integrates with machine learning libraries, including caret and randomForest, which support a wide range of algorithms for classification and clustering. This allows data scientists to dive into advanced techniques, such as decision trees and k-means clustering, enhancing their toolkit and making R a robust choice for building data-driven solutions.</p>
+
+        <!-- Take the Test Button -->
+        <a href="{{ url_for('main.r_test') }}" class="take-test-btn">Take the Test</a>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development | ElevateU</title>
+    <style>
+        /* General styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: Arial, sans-serif;
+            background-color: #d7e3fc; /* Soft pastel blue */
+            color: #333;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Container and content section */
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        .take-test-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #d7e3fc;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .take-test-btn:hover {
+            background-color: #b0c6ec;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Web Development</h2>
+        
+        <p>In this course, you’ll start with the basics of HTML, the backbone of every website, which is used to structure and organize content. From creating headings, paragraphs, images, and links to building entire page layouts, HTML provides the foundational elements necessary for web development. You’ll learn to organize content logically, ensuring accessibility and ease of navigation for all users.</p>
+
+        <p>Once you’ve mastered HTML, CSS will be your next focus. CSS is essential for styling and layout, enabling you to create visually appealing and responsive designs that look great on all screen sizes. With CSS, you’ll control colors, fonts, spacing, and even complex layouts like grids and flexbox, transforming basic HTML structures into attractive, polished web pages.</p>
+
+        <p>JavaScript is the next major component, bringing interactivity and dynamic functionality to your websites. JavaScript allows you to manipulate HTML and CSS, create animations, handle user input, and respond to events. You’ll learn to build features like image sliders, forms, and interactive menus, making your websites more engaging and user-friendly.</p>
+
+        <p>Finally, we’ll cover the basics of backend development to complete the web development process. Backend programming allows you to handle data and create functionalities that users can interact with, such as login systems, databases, and server-side logic. This course will introduce you to backend basics, preparing you to connect your frontend with the server for fully functional web applications.</p>
+
+        <!-- Take the Test Button -->
+        <a href="{{ url_for('main.web_test') }}" class="take-test-btn">Take the Test</a>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Test | ElevateU</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body, html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #d7e3fc;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        /* Flash Message Styling */
+        .flash-message {
+            background-color: #ffcc00;
+            color: #333;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .test-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .question-card {
+            background-color: white;
+            border: 1px solid #d7e3fc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .question-card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .question-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .options {
+            margin-bottom: 15px;
+        }
+
+        /* Style for radio buttons and labels */
+        .options input[type="radio"] {
+            margin-right: 10px;
+            accent-color: #d7e3fc; /* radio button color */
+        }
+
+        .options label {
+            font-size: 1rem;
+            color: #555;
+            cursor: pointer;
+            padding: 5px;
+            display: inline-block;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .options label:hover {
+            color: #fff;
+            background-color: #d7e3fc;
+            border-radius: 5px;
+        }
+
+        .options input[type="radio"]:checked + label {
+            background-color: #d7e3fc;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            color: #d7e3fc;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #6f98e0;
+            color: #fff;
+        }
+
+        .submit-btn:active {
+            background-color: #4a82c3;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #555;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Python Programming Test</h1>
+    
+    <form method="POST" action="/submit_python">
+        <div class="test-content">
+            <!-- Question 1 -->
+            <div class="question-card">
+                <h2 class="question-title">1. What does Python use to define code blocks?</h2>
+                <div class="options">
+                    <input type="radio" id="q1_opt1" name="py_q1" value="Brackets">
+                    <label for="q1_opt1">Brackets</label><br>
+                    <input type="radio" id="q1_opt2" name="py_q1" value="Indentation">
+                    <label for="q1_opt2">Indentation</label><br>
+                    <input type="radio" id="q1_opt3" name="py_q1" value="Parentheses">
+                    <label for="q1_opt3">Parentheses</label><br>
+                    <input type="radio" id="q1_opt4" name="py_q1" value="Curly braces">
+                    <label for="q1_opt4">Curly braces</label><br>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-card">
+                <h2 class="question-title">2. What is the correct syntax for defining a function in Python?</h2>
+                <div class="options">
+                    <input type="radio" id="q2_opt1" name="py_q2" value="def function_name():">
+                    <label for="q2_opt1">def function_name():</label><br>
+                    <input type="radio" id="q2_opt2" name="py_q2" value="function_name :=">
+                    <label for="q2_opt2">function_name :=</label><br>
+                    <input type="radio" id="q2_opt3" name="py_q2" value="define function_name">
+                    <label for="q2_opt3">define function_name</label><br>
+                    <input type="radio" id="q2_opt4" name="py_q2" value="function function_name()">
+                    <label for="q2_opt4">function function_name()</label><br>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-card">
+                <h2 class="question-title">3. What are Python lists used for?</h2>
+                <div class="options">
+                    <input type="radio" id="q3_opt1" name="py_q3" value="Storing single values">
+                    <label for="q3_opt1">Storing single values</label><br>
+                    <input type="radio" id="q3_opt2" name="py_q3" value="Storing key-value pairs">
+                    <label for="q3_opt2">Storing key-value pairs</label><br>
+                    <input type="radio" id="q3_opt3" name="py_q3" value="Storing multiple items">
+                    <label for="q3_opt3">Storing multiple items</label><br>
+                    <input type="radio" id="q3_opt4" name="py_q3" value="Storing objects">
+                    <label for="q3_opt4">Storing objects</label><br>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-card">
+                <h2 class="question-title">4. Which of the following is NOT a control structure in Python?</h2>
+                <div class="options">
+                    <input type="radio" id="q4_opt1" name="py_q4" value="If statement">
+                    <label for="q4_opt1">If statement</label><br>
+                    <input type="radio" id="q4_opt2" name="py_q4" value="For loop">
+                    <label for="q4_opt2">For loop</label><br>
+                    <input type="radio" id="q4_opt3" name="py_q4" value="While loop">
+                    <label for="q4_opt3">While loop</label><br>
+                    <input type="radio" id="q4_opt4" name="py_q4" value="Exception handling">
+                    <label for="q4_opt4">Exception handling</label><br>
+                </div>
+            </div>
+
+            <button class="submit-btn" type="submit">Submit</button>
+        </div>
+    </form>
+    
+    <script>
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', function(event) {
+            let allAnswered = true;
+            // Check if all questions have been answered
+            document.querySelectorAll('.question-card').forEach(function(questionCard) {
+                const options = questionCard.querySelectorAll('input[type="radio"]');
+                let answered = false;
+                options.forEach(function(option) {
+                    if (option.checked) answered = true;
+                });
+                if (!answered) allAnswered = false;
+            });
+
+            // Show a flash message if not all questions are answered
+            if (!allAnswered) {
+                event.preventDefault(); // Prevent form submission
+                alert("Please answer all questions");
+            }
+        });
+    </script>
+</body>
+</html>

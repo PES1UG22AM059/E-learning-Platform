@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science with R Test | ElevateU</title>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body, html {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background-color: #d7e3fc;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        /* Header styling */
+        h1 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        /* Test content */
+        .test-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .question-card {
+            background-color: white;
+            border: 1px solid #d7e3fc;
+            border-radius: 10px;
+            padding: 20px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .question-card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .question-title {
+            font-size: 1.2rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .options {
+            margin-bottom: 15px;
+        }
+
+        /* Style for radio buttons and labels */
+        .options input[type="radio"] {
+            margin-right: 10px;
+            accent-color: #d7e3fc; /* radio button color */
+        }
+
+        .options label {
+            font-size: 1rem;
+            color: #555;
+            cursor: pointer;
+            padding: 5px;
+            display: inline-block;
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .options label:hover {
+            color: #fff;
+            background-color: #d7e3fc;
+            border-radius: 5px;
+        }
+
+        .options input[type="radio"]:checked + label {
+            background-color: #d7e3fc;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            color: #d7e3fc;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #6f98e0;
+            color: #fff;
+        }
+
+        .submit-btn:active {
+            background-color: #4a82c3;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #555;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Data Science with R Programming Test</h1>
+    
+    <form method="POST" action="/submit_r">
+        <div class="test-content">
+            <!-- Question 1 -->
+            <div class="question-card">
+                <h2 class="question-title">1. Which R package is commonly used for data manipulation?</h2>
+                <div class="options">
+                    <input type="radio" id="q1_opt1" name="ds_q1" value="ggplot2">
+                    <label for="q1_opt1">ggplot2</label><br>
+                    <input type="radio" id="q1_opt2" name="ds_q1" value="dplyr">
+                    <label for="q1_opt2">dplyr</label><br>
+                    <input type="radio" id="q1_opt3" name="ds_q1" value="caret">
+                    <label for="q1_opt3">caret</label><br>
+                    <input type="radio" id="q1_opt4" name="ds_q1" value="tidyr">
+                    <label for="q1_opt4">tidyr</label><br>
+                </div>
+            </div>
+            <!-- Question 2 -->
+            <div class="question-card">
+                <h2 class="question-title">2. Which library in R is used for data visualization?</h2>
+                <div class="options">
+                    <input type="radio" id="q2_opt1" name="ds_q2" value="ggplot2">
+                    <label for="q2_opt1">ggplot2</label><br>
+                    <input type="radio" id="q2_opt2" name="ds_q2" value="randomForest">
+                    <label for="q2_opt2">randomForest</label><br>
+                    <input type="radio" id="q2_opt3" name="ds_q2" value="dplyr">
+                    <label for="q2_opt3">dplyr</label><br>
+                    <input type="radio" id="q2_opt4" name="ds_q2" value="caret">
+                    <label for="q2_opt4">caret</label><br>
+                </div>
+            </div>
+            <!-- Question 3 -->
+            <div class="question-card">
+                <h2 class="question-title">3. Which of the following is a machine learning library in R?</h2>
+                <div class="options">
+                    <input type="radio" id="q3_opt1" name="ds_q3" value="ggplot2">
+                    <label for="q3_opt1">ggplot2</label><br>
+                    <input type="radio" id="q3_opt2" name="ds_q3" value="randomForest">
+                    <label for="q3_opt2">randomForest</label><br>
+                    <input type="radio" id="q3_opt3" name="ds_q3" value="tidyr">
+                    <label for="q3_opt3">tidyr</label><br>
+                    <input type="radio" id="q3_opt4" name="ds_q3" value="dplyr">
+                    <label for="q3_opt4">dplyr</label><br>
+                </div>
+            </div>
+            <!-- Question 4 -->
+            <div class="question-card">
+                <h2 class="question-title">4. What is the primary purpose of the dplyr package in R?</h2>
+                <div class="options">
+                    <input type="radio" id="q4_opt1" name="ds_q4" value="Data visualization">
+                    <label for="q4_opt1">Data visualization</label><br>
+                    <input type="radio" id="q4_opt2" name="ds_q4" value="Data manipulation">
+                    <label for="q4_opt2">Data manipulation</label><br>
+                    <input type="radio" id="q4_opt3" name="ds_q4" value="Machine learning">
+                    <label for="q4_opt3">Machine learning</label><br>
+                    <input type="radio" id="q4_opt4" name="ds_q4" value="Statistical modeling">
+                    <label for="q4_opt4">Statistical modeling</label><br>
+                </div>
+            </div>
+            <button class="submit-btn" type="submit">Submit</button>
+        </div>
+    </form>
+
+
+    <script>
+         // Handle form submission
+         document.querySelector('form').addEventListener('submit', function(event) {
+            let allAnswered = true;
+            // Check if all questions have been answered
+            document.querySelectorAll('.question-card').forEach(function(questionCard) {
+                const options = questionCard.querySelectorAll('input[type="radio"]');
+                let answered = false;
+                options.forEach(function(option) {
+                    if (option.checked) answered = true;
+                });
+                if (!answered) allAnswered = false;
+            });
+
+            // Show a flash message if not all questions are answered
+            if (!allAnswered) {
+                event.preventDefault(); // Prevent form submission
+                alert("Please answer all questions");
+            }
+        });
+
+    </script>
+
+</body>
+</html>

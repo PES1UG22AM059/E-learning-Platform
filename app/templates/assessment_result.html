@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Result</title>
+    <style>
+        /* General styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: Arial, sans-serif;
+            background-color: #d7e3fc;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 100%;
+        }
+
+        .certificate-box {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 500px;
+            border: 5px solid #d7e3fc;
+            max-width: 100%;
+        }
+
+        .certificate-box h1 {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .certificate-box h2 {
+            font-size: 1.5em;
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+
+        .certificate-box p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .name-highlight {
+            font-weight: bold;
+            color: #000;
+            font-size: 1.3em;
+        }
+
+        .completion-text {
+            font-style: italic;
+            color: #444;
+            margin-top: 20px;
+        }
+
+        .result-section {
+            margin-top: 20px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .result-section p {
+            margin: 5px 0;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .certificate-footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        #download-btn {
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #d7e3fc;
+            background-color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+       
+
+        #download-btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="certificate-box">
+            <h1>Certificate of Completion</h1>
+            <h2>{{ results.course_name }}</h2>
+            <p>This is to certify that</p>
+            <p class="name-highlight">{{ results.username }}</p>
+            <p>has successfully completed the assessment on</p>
+            <p class="name-highlight">{{ results.date }}</p>
+            
+            <div class="result-section">
+                <h1>{{ results.course_name }} Assessment Result</h1>
+                <p>Date: {{ results.date }}</p>
+                <p>Your Score: {{ results.marks }} / 20</p>
+            </div>
+
+            <p class="completion-text">Congratulations on your achievement!</p>
+            
+            <div class="certificate-footer">
+                <p>Powered by ElevateU</p>
+            </div>
+        </div>
+
+        <button id="download-btn" onclick="downloadCertificate('{{ results.course_name }}', '{{ results.username }}')">
+            Download Certificate
+        </button>
+    </div>
+
+    <script>
+        function downloadCertificate(courseName, username) {
+            fetch(`/update_completion_status`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ course_name: courseName, username: username }),
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Your certificate has been downloaded!');
+                } else {
+                    alert('An error occurred. Please try again later.');
+                }
+            })
+            .catch(err => {
+                console.error(err);
+                alert('An error occurred. Please try again.');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning | ElevateU</title>
+    <style>
+        /* General styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: Arial, sans-serif;
+            background-color: #d7e3fc; /* Soft pastel blue */
+            color: #333;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Container and content section */
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        .take-test-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #d7e3fc;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .take-test-btn:hover {
+            background-color: #b0c6ec;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Machine Learning</h2>
+
+        <p>This course begins by covering the foundational concepts of machine learning, including supervised, unsupervised, and reinforcement learning. You will gain insights into how these paradigms help machines learn patterns and make predictions based on data, setting the stage for more advanced studies in artificial intelligence.</p>
+
+        <p>Next, we delve into essential algorithms, such as linear regression, decision trees, support vector machines, and neural networks. You will understand how these algorithms work, their advantages, and best-use cases, empowering you to select appropriate algorithms based on problem requirements.</p>
+
+        <p>The course emphasizes practical applications, allowing you to apply algorithms to real-world data and solve problems ranging from predictive modeling to natural language processing. Through case studies, you will see how machine learning models improve decision-making and automate processes across various industries.</p>
+
+        <p>Hands-on projects will reinforce your learning by challenging you to build and optimize models, evaluate their performance, and interpret results. By the end of this course, you will be well-equipped with machine learning skills to tackle complex data challenges and drive innovation in the AI field.</p>
+
+        <!-- Take the Test Button -->
+        <a href="{{ url_for('main.ml_test') }}" class="take-test-btn">Take the Test</a>
+
+    </div>
+</body>
+</html>

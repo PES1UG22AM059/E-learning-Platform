@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming Course | ElevateU</title>
+    <style>
+        /* General styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: Arial, sans-serif;
+            background-color: #d7e3fc; /* Soft pastel blue */
+            color: #333;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Container and content section */
+        .container {
+            background-color: #ffffff; /* White background for container */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        .take-test-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #d7e3fc; /* Matching color */
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .take-test-btn:hover {
+            background-color: #b0c6ec;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Python Programming</h2>
+        
+        <p>Python is a powerful, high-level programming language that is known for its readability and versatility. The journey into Python starts with understanding its basic structure: Python scripts are written in plain text, and code blocks are defined by indentation rather than brackets, making it easy to follow and edit. One of Python’s greatest strengths lies in its dynamic typing, allowing variables to be assigned without explicitly declaring their type, which can simplify coding and make it more intuitive for beginners.</p>
+
+        <p>In Python, everything from numbers and strings to more complex structures like lists and dictionaries is considered an object. Lists allow you to store multiple items in a single variable and support various operations such as indexing, slicing, and appending, making them very flexible. Dictionaries, on the other hand, store data in key-value pairs, ideal for situations where data lookup by specific keys is essential.</p>
+
+        <p>Functions in Python allow you to group code into reusable pieces, making your code more modular and readable. You can create functions using the `def` keyword, followed by a function name, parameters, and a colon. Functions can return values, and they also help in reducing redundancy in code. Python also supports lambda functions, which are single-line, anonymous functions used for quick calculations or filtering data.</p>
+
+        <p>Control structures such as `if` statements, `for` loops, and `while` loops provide the foundation for flow control in Python programs. `If` statements are used to execute specific blocks of code based on certain conditions, while `for` and `while` loops help in iterating over items or repeating actions. These control structures are essential for tasks such as checking conditions and executing code blocks multiple times, making your programs dynamic and interactive.</p>
+
+        <p>As you progress, you’ll explore Python’s libraries, which extend the language’s functionality significantly. Libraries like NumPy and Pandas allow you to work with large datasets and perform complex calculations efficiently. These libraries open up possibilities for data manipulation, making Python a preferred language in data science, machine learning, and beyond.</p>
+
+        <!-- Take the Test Button -->
+        <a href="{{ url_for('main.python_test') }}" class="take-test-btn">Take the Test</a>
+
+    </div>
+</body>
+</html>

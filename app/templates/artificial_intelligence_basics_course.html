@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artificial Intelligence Basics | ElevateU</title>
+    <style>
+        /* General styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            font-family: Arial, sans-serif;
+            background-color: #d7e3fc; /* Soft pastel blue */
+            color: #333;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Container and content section */
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        .take-test-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #d7e3fc;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .take-test-btn:hover {
+            background-color: #b0c6ec;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Artificial Intelligence Basics</h2>
+
+        <p>Artificial Intelligence (AI) is rapidly transforming the world, and this course is designed to provide you with a strong foundation in AI principles. We will begin by exploring the fundamental concepts of AI, which include intelligent agents, problem-solving, and decision-making processes that mimic human-like reasoning.</p>
+
+        <p>A core component of AI is neural networks, which are inspired by the human brain. In this course, you'll learn how artificial neural networks function and how they are used in tasks such as classification, regression, and pattern recognition. You'll also explore deep learning and how it powers many modern AI applications.</p>
+
+        <p>Natural Language Processing (NLP) is another vital area of AI, focused on enabling computers to understand, interpret, and generate human language. This section covers techniques used in NLP, such as tokenization, sentiment analysis, and text classification, along with applications like chatbots and translation systems.</p>
+
+        <p>Lastly, the course introduces computer vision, the field of AI that enables machines to interpret and understand the visual world. You'll explore how computer vision algorithms process images, identify objects, and even perform facial recognition, preparing you for real-world applications like autonomous driving and medical imaging.</p>
+
+        <!-- Take the Test Button -->
+        <a href="{{ url_for('main.ai_test') }}" class="take-test-btn">Take the Test</a>
+
+    </div>
+</body>
+</html>
