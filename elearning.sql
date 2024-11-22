@@ -1,6 +1,5 @@
-DROP DATABASE IF EXISTS elearning_platform;
-CREATE DATABASE elearning_platform;
-USE elearning_platform;
+CREATE DATABASE Library;
+USE Library;
 
 -- Create User table
 CREATE TABLE user (
